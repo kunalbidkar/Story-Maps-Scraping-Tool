@@ -1,0 +1,20 @@
+{
+  "name": "rest-statisticalanalysis",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "clean-up": "node scripts/cleanUp.js",
+    "general-stats": "node index.js",
+    "specific-template-stats": "node templateModules/cascadeStats.js && node templateModules/mapTourStats.js && node templateModules/mapJournalStats.js && node templateModules/mapSeriesStats.js",
+    "build": "npm run clean-up && npm run general-stats && npm run specific-template-stats",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Kunal Bidkar",
+  "license": "ISC",
+  "dependencies": {
+    "axios": "^0.18.0",
+    "json-2-csv": "^2.2.0",
+    "lodash": "^4.17.10"
+  }
+}
